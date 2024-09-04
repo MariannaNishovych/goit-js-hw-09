@@ -66,24 +66,25 @@ const images = [
   },
 ];
 
-const gallary = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 
-const addImages = images.map(({preview, original, description}) =>
-    `<li class="gallery-item">
-	<a class="gallery-link" href=${original} width='1112px' height = '640px'>
-		<img 
-			class="gallery-image" 
-			src=${preview} 
-            alt=${description}
-            width:"360p"
-            height:"200"    
-			/>
-	</a>
+
+const addImage = images.map(({ preview, original, description }) =>
+	`<li class="gallery-item">
+<a class="gallery-link"
+width='1112px'
+height = '640px'
+href="${original}">
+    <img
+    class="gallery-image"
+    src="${preview}"
+    alt="${description}"
+    />
+</a>
 </li>`).join('');
 
-gallary.insertAdjacentElement("afterbegin", addImages);
+gallery.insertAdjacentHTML('afterbegin', addImage);
 
-console.log(gallary);
 
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";

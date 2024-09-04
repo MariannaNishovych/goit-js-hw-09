@@ -5,14 +5,71 @@
   |============================
 */
 /* Common styles */
-@import url('./reset.css');
+/* @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
 @import url('./animations.css');
 
 /* Sections style */
-@import url('./header.css');
+/* @import url('./header.css');
 @import url('./vite-promo.css');
 @import url('./badges.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+@import url('./footer.css'); */ 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: #fff;
+
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 24px;
+  width: 1128px;
+  padding: 24px 156px;
+
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 48px) / 3);
+  object-fit: cover;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-link {
+  cursor: pointer;
+
+}
+
+.gallery-image {
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+
+}
